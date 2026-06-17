@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STAR SHOP</title>
+<script src="https://kit.fontawesome.com/374dce9fdf.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+body{
+    background:#080b14;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Star Background */
+.stars{
+    position:fixed;
+    inset:0;
+    z-index:-1;
+}
+
+.star{
+    position:absolute;
+    width:2px;
+    height:2px;
+    background:white;
+    border-radius:50%;
+    opacity:.7;
+}
+
+/* Navbar */
+nav{
+    width:95%;
+    max-width:1400px;
+    margin:20px auto;
+    padding:16px 24px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(20px);
+
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:800;
+    background:linear-gradient(90deg,#60a5fa,#a855f7);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.links{
+    display:flex;
+    gap:30px;
+}
+
+.links a{
+    color:#d1d5db;
+    text-decoration:none;
+}
+
+.search{
+    padding:12px 16px;
+    border:none;
+    border-radius:14px;
+    background:rgba(255,255,255,.08);
+    color:white;
+}
+
+/* Hero */
+.hero{
+    width:95%;
+    max-width:1400px;
+    margin:auto;
+    margin-top:40px;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(37,99,235,.9),
+        rgba(124,58,237,.9)
+    );
+
+    border-radius:35px;
+    padding:80px 60px;
+}
+
+.hero h1{
+    font-size:70px;
+    font-weight:800;
+}
+
+.hero p{
+    margin-top:15px;
+    max-width:600px;
+    color:#dbeafe;
+    font-size:18px;
+}
+
+.hero button{
+    margin-top:30px;
+    padding:15px 30px;
+    border:none;
+    border-radius:14px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+/* Featured Categories */
+.categories{
+    width:95%;
+    max-width:1400px;
+    margin:60px auto;
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.category{
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    backdrop-filter:blur(15px);
+
+    padding:30px;
+    border-radius:24px;
+
+    transition:.3s;
+}
+
+.category:hover{
+    transform:translateY(-8px);
+}
+
+.category h3{
+    margin-bottom:10px;
+}
+
+/* Products */
+.products{
+    width:95%;
+    max-width:1400px;
+    margin:auto;
+    margin-bottom:80px;
+}
+
+.products h2{
+    margin-bottom:25px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:24px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.content{
+    padding:20px;
+}
+
+.price{
+    color:#22d3ee;
+    font-size:22px;
+    font-weight:700;
+    margin-top:10px;
+}
+
+.buy{
+    width:100%;
+    margin-top:15px;
+    padding:12px;
+    border:none;
+    border-radius:12px;
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+    color:white;
+    cursor:pointer;
+
+
+.clock{
+    min-width:140px;
+    text-align:center;
+
+    padding:12px 20px;
+
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:14px;
+
+    font-size:18px;
+    font-weight:700;
+    color:#60a5fa;
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:0 0 20px rgba(96,165,250,.2);
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="stars" id="stars"></div>
+
+<nav>
+    <div class="logo">STAR SHOP</div>
+
+    <div class="links">
+        <a href="#/">Home</a>
+        <a href="https://discord.gg/twEYGze3jF">Contact</a>
+    </div>
+
+    <div class="clock" id="clock">00:00:00</div>
+</nav>
+
+<section class="hero">
+    <h1>Fortnite Accounts</h1>
+    <p>
+        Safest Website Good Prices  
+    </p>
+    <button>Shop Now</button>
+</section>
+
+<section class="categories">
+    <div class="category">
+        <h3><i class="fa-brands fa-tiktok"></i>TIKTOK</h3>
+        <p>Christopher4986100</p>
+    </div>
+
+    <div class="category">
+        <h3><i class="fa-brands fa-youtube"></i>YOUTUBE</h3>
+        <p>Christopher4986FN</p>
+    </div>
+
+    <div class="category">
+        <h3><i class="fa-brands fa-twitch"></i>TWITCH</h3>
+        <p>Christopher4986_</p>
+    </div>
+
+    <div class="category">
+        <h3><i class="fa-brands fa-discord"></i>DISCORD</h3>
+        <p>Christopher4986100</p>
+    </div>
+</section>
+
+<section class="products">
+    <h2>ALL ACOUNTS</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <img src="skinimg/hybrid.png">
+            <div class="content">
+                <h3>CHAPTER 1</h3>
+                <div class="price">$30.00</div>
+                <button class="buy">Purchase</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="skinimg/vbuck.png">
+            <div class="content">
+                <h3>VBUCKS ONLY</h3>
+                <div class="price">$10.00</div>
+                <button class="buy">Purchase</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="skinimg/image (1).png">
+            <div class="content">
+                <h3>CHAPTER 2</h3>
+                <div class="price">$19.99</div>
+                <button class="buy">Purchase</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<script>
+const stars = document.getElementById("stars");
+
+for(let i=0;i<250;i++){
+    const star = document.createElement("div");
+    star.className="star";
+    star.style.left=Math.random()*100+"%";
+    star.style.top=Math.random()*100+"%";
+    stars.appendChild(star);
+}
+</script>
+<script>
+function updateClock() {
+    const now = new Date();
+
+    const estTime = now.toLocaleTimeString("en-US", {
+        timeZone: "America/New_York",
+        hour12: true,
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit"
+    });
+
+    document.getElementById("clock").textContent = estTime;
+}
+
+updateClock();
+setInterval(updateClock, 1000);
+</script>
+
+</body>
+
+</html>
+
+
+</style>
